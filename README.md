@@ -56,6 +56,36 @@ RectifiedHR-1/
 - Quantitative improvements in CLIP and MS-SSIM scores
 - Energy trajectory analysis showing stabilization
 
+## 🖼️ Results Showcase
+
+### Quantitative Comparison
+
+| Config      | Sampler | CFG 3   | CFG 5   | CFG 7   | CFG 10  | CFG 12  | CFG 15  | CFG 18  |
+|-------------|---------|---------|---------|---------|---------|---------|---------|---------|
+| DPM++ 2M    | dpm++   | 0.9951  | 0.9972  | 0.9985  | 0.9998  | 0.9999  | 0.9998  | 0.9997  |
+| DDIM        | ddim    | 0.9948  | 0.9969  | 0.9982  | 0.9999  | 0.9999  | 0.9999  | 0.9998  |
+| Euler A     | euler   | 0.9939  | 0.9961  | 0.9978  | 0.9997  | 0.9998  | 0.9997  | 0.9996  |
+| HiResFix*   | --      |   --    |   --    |   --    | 0.9987  |   --    |   --    |   --    |
+| RectifiedFlow* | --   |   --    |   --    |   --    | 0.9982  |   --    |   --    |   --    |
+
+*Baselines from original papers; may not be directly comparable.
+
+### Artifact vs. Stabilized Output
+
+| High CFG (18): Artifact | Adaptive Schedule: Stabilized |
+|:----------------------:|:-----------------------------:|
+| ![Artifact](paper/figures/bad_high_cfg_artifact.png) | ![Stabilized](paper/figures/stabilized_output.png) |
+
+*Left: Oversaturation and distortion at high CFG. Right: Clean, artifact-free output with adaptive guidance.*
+
+### Sampler Comparison (Main Prompt)
+
+| DDIM | DPM++ 2M | Euler A |
+|:----:|:--------:|:-------:|
+| ![DDIM](paper/figures/baseline_ddim_cfg10.0_512_prompt10_20250712_113447.png) | ![DPM++ 2M](paper/figures/baseline_dpm++_2m_cfg10.0_512_prompt10_20250712_114143.png) | ![Euler A](paper/figures/baseline_euler_a_cfg10.0_512_prompt10_20250712_113814.png) |
+
+*All images: Prompt = "A space station orbiting Earth, sci-fi atmosphere", CFG=10*
+
 ## 📄 Citation
 If you use this work, please cite:
 ```
