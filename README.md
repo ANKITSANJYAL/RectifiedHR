@@ -40,7 +40,7 @@ RectifiedHR-1/
 
 2. **Run all experiments (reproduce paper results):**
    ```bash
-   python run_experiments.py --config configs/full_experiment.yaml
+   python run_experiments.py 
    ```
    *(Edit the config or script as needed for your hardware/prompts.)*
 
@@ -49,17 +49,6 @@ RectifiedHR-1/
    python run_single_experiment.py --prompt "A beautiful landscape..." --cfg_scale 10 --sampler ddim
    ```
 
-4. **Reproduce paper figures:**
-   - All images referenced in the paper are in `paper/figures/`.
-   - To regenerate, rerun the above scripts with the same prompts/configs.
-   - Compile the paper with:
-     ```bash
-     cd paper
-     pdflatex paper.tex
-     bibtex paper
-     pdflatex paper.tex
-     pdflatex paper.tex
-     ```
 
 ## 📊 Results
 - Improved high-resolution image quality (512×512)
@@ -80,7 +69,6 @@ If you use this work, please cite:
 
 ## 📚 Paper
 - [arXiv link (to be added)](https://arxiv.org/abs/XXXX.XXXXX)
-- See `paper/rectifiedhr.pdf` for the full manuscript.
 
 ## 📝 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
