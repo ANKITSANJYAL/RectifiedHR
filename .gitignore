@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.gz
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints
+
+# Experiment outputs (not referenced in paper)
+experiments/comparisons/
+experiments/energy_plots/
+experiments/baseline/*.json
+experiments/baseline/*.csv
+experiments/baseline/*metadata*
+experiments/adaptive_cfg/*.json
+experiments/adaptive_cfg/*.csv
+
+# Paper intermediate
+paper/figures/*.csv
+paper/figures/summary_dashboard.png
+paper/figures/energy_comparison.png
+paper/figures/metrics_comparison.png
+paper/figures/energy_trends.png
+paper/figures/Figure_1.png
+paper/figures/figure2_energy_stability.png
+paper/figures/figure3_final_energy_correlation.png
+
+# Misc
+FILES_IN_REPO.txt 
