@@ -1,0 +1,10 @@
+{
+  "task": "Schedule comparison plots",
+  "task_id": "schedule_plots",
+  "generated_at": "2025-10-02T14:00:50.931461",
+  "status": "completed",
+  "files_generated": [
+    "schedule_plots_plot.png",
+    "schedule_plots_table.csv"
+  ]
+}

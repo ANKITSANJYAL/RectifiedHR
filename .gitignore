@@ -6,6 +6,8 @@ __pycache__/
 *.egg-info/
 dist/
 build/
+venv/
+paper/
 
 # LaTeX
 *.aux

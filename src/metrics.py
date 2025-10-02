@@ -32,7 +32,7 @@ class ImageEvaluator:
     """Evaluates image quality using various metrics."""
     
     def __init__(self, device: str = None):
-        self.device = device or ("mps" if torch.backends.mps.is_available() else "cpu")
+        self.device = device or ("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
         self.clip_model = None
         self.clip_preprocess = None
         

@@ -1,0 +1,10 @@
+{
+  "task": "Energy-quality correlation",
+  "task_id": "correlation_analysis",
+  "generated_at": "2025-10-02T14:00:50.930899",
+  "status": "completed",
+  "files_generated": [
+    "correlation_analysis_plot.png",
+    "correlation_analysis_table.csv"
+  ]
+}

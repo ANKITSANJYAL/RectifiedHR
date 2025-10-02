@@ -103,7 +103,7 @@ def setup_adaptive_pipeline(model_name: str = "runwayml/stable-diffusion-v1-5"):
     # Use DDIM scheduler for better control
     pipeline.scheduler = DDIMScheduler.from_config(pipeline.scheduler.config)
     
-    device = "mps" if torch.backends.mps.is_available() else "cpu"
+    device = "mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu"
     pipeline = pipeline.to(device)
     
     return pipeline
